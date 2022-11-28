@@ -1,0 +1,299 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "./assets/scss/variables";
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/animate";
+@import "~bootstrap/scss/bootstrap";
+@import "./assets/scss/fonts";
+@import "./assets/scss/functions";
+
+/* === Icon fonts === */
+@import "~@mdi/font/scss/materialdesignicons";
+
+/* === Template mixins === */
+@import "./assets/scss/mixins/animation";
+@import "./assets/scss/mixins/badges";
+@import "./assets/scss/mixins/buttons";
+@import "./assets/scss/mixins/misc";
+@import "./assets/scss/mixins/color-functions";
+@import "./assets/scss/mixins/cards";
+@import "./assets/scss/mixins/blockqoute";
+@import "./assets/scss/mixins/popovers";
+@import "./assets/scss/mixins/tooltips";
+
+/* === Core Styles === */
+@import "./assets/scss/background";
+@import "./assets/scss/typography";
+@import "./assets/scss/reset";
+@import "./assets/scss/responsive";
+@import "./assets/scss/misc";
+@import "./assets/scss/utilities";
+@import "./assets/scss/demo";
+@import "./assets/scss/spinner";
+
+/* === Components === */
+@import "./assets/scss/components/forms";
+@import "./assets/scss/components/checkbox-radio";
+@import "./assets/scss/components/icons";
+@import "./assets/scss/components/tables";
+@import "./assets/scss/components/accordions";
+@import "./assets/scss/components/buttons";
+@import "./assets/scss/components/breadcrumbs";
+@import "./assets/scss/components/badges";
+@import "./assets/scss/components/cards";
+@import "./assets/scss/components/preview";
+@import "./assets/scss/components/tooltips";
+@import "./assets/scss/components/popovers";
+@import "./assets/scss/components/lists";
+@import "./assets/scss/components/bootstrap-progress";
+@import "./assets/scss/components/bootstrap-alerts";
+@import "./assets/scss/components/tabs";
+@import "./assets/scss/components/dropdowns";
+@import "./assets/scss/components/date-picker";
+@import "./assets/scss/components/pagination";
+@import "./assets/scss/components/portfolio";
+@import "./assets/scss/components/todo-list";
+
+@import "./assets/scss/components/landing-screens/auth";
+
+/* === Layout === */
+@import "./assets/scss/layout";
+
+// Custom Variables
+$red_color: #da1c23;
+$blue_color: rgb(13, 54, 158);
+
+.custom-red-color {
+  background-color: $red_color;
+}
+
+.blue-color {
+  background-color: $blue_color;
+}
+
+.focused-button {
+  &:hover,
+  &:focus {
+    background-color: white;
+    color: $red_color !important;
+    border: 1px solid $red_color;
+  }
+}
+
+// *************************** formFields Styling ************************
+.custom-form-control {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: white;
+  padding: 9px 16px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-top: 13px;
+}
+
+.form_group {
+  label {
+    margin: 15px 0px 3px;
+    font-weight: 600;
+  }
+}
+
+.form_control {
+  display: block;
+  width: 100%;
+  background-color: white;
+  padding: 8px 8px;
+  /* font-size: 16px; */
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  border-left: 4px solid #0d369e;
+  transition: all 0.2s linear;
+
+  &:focus {
+    border: 1px solid $blue_color;
+    outline: $blue_color;
+    border-left: 7px solid $blue_color;
+  }
+}
+
+.invalid_field {
+  border: 1px solid red;
+  outline: red;
+  border-left: 7px solid red;
+  &:focus {
+    border: 1px solid red;
+    outline: red;
+    border-left: 7px solid red;
+  }
+}
+
+.search_wrape {
+  color: $red_color;
+  .search {
+    display: block;
+    width: 33%;
+    background-color: white;
+    padding: 7px 8px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    /* border-left: 4px solid #0d369e; */
+    transition: all 0.2s linear;
+    &:focus {
+      border: 1px solid $blue_color;
+      outline: $blue_color;
+      border-left: 7px solid $blue_color;
+    }
+  }
+}
+
+.read_Only {
+  border-style: dashed;
+  background-color: #8080803b !important;
+  border-left: 2px solid;
+  color: black;
+}
+//  **************************** Form Fields Styling Ends ************************
+
+.dataNotFound {
+  color: red;
+  text-align: center;
+  padding: 20px;
+}
+
+.no_data_found_in_canvas {
+  text-align: center;
+  color: red;
+  padding: 44px;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.margin_negative_10 {
+  margin-top: -28px;
+}
+
+// **************************************** canvas view*****************************//
+
+.for_no_data {
+  background-color: white !important;
+  padding: 45px !important;
+  text-align: center;
+  color: $red_color;
+}
+
+.canvas_view {
+  padding: 0px;
+  margin: 6px 6px;
+  overflow: auto;
+  .custom_card {
+    background-color: white;
+    padding: 10px 22px;
+    margin: 18px 0px;
+    border-radius: 9px;
+    .header_edit_delete {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .Header {
+        color: $red_color;
+        font-size: 22px;
+        padding: 10px 22px;
+        width: 88%;
+      }
+      .delete_Edit_btns {
+        text-align: right;
+        .edit-icon {
+          color: $blue_color;
+          font-size: 17px;
+        }
+        .delete-icon {
+          color: $red_color;
+          font-size: 25px;
+          padding-left: 16px;
+        }
+      }
+    }
+    .Card_body {
+      display: flex;
+      flex-wrap: wrap;
+      .caption_value_wrape {
+        display: flex;
+        margin: 3px 12px;
+        border: 1px solid $red_color;
+        border-radius: 5px;
+        .caption {
+          color: $blue_color;
+          border-right: 1px solid;
+          padding: 5px 7px;
+          font-size: 13px;
+          background: #8080802e;
+        }
+        .value {
+          color: $blue_color;
+          padding: 5px 7px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+// ********************* Buttons CSS *************//
+
+.custom_btn {
+  background-color: $blue_color;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 13px;
+  padding: 9px 14px;
+  border: 1px solid;
+  transition: all 0.5s;
+  &:hover {
+    background-color: white;
+    border: 1px solid $blue_color;
+    color: $blue_color;
+  }
+}
+
+.edit-delete-wrape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .edit-icon {
+    color: $blue_color;
+    font-size: 17px;
+  }
+
+  .delete-icon {
+    color: #e50101;
+    font-size: 17px;
+    padding-left: 16px;
+  }
+}
+
+.caption_value_wrape {
+  display: flex;
+  margin: 3px 12px;
+  border: 1px solid $red_color;
+  border-radius: 5px;
+  .caption {
+    color: $blue_color;
+    border-right: 1px solid;
+    padding: 5px 7px;
+    font-size: 13px;
+    background: #8080802e;
+  }
+  .value {
+    color: $blue_color;
+    padding: 5px 7px;
+    font-size: 13px;
+  }
+}
